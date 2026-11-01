@@ -38,3 +38,22 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+*.heic
+*.heif
+*.raw
+*.psd
+*.eps
+*.avif
+*.jfif
+
