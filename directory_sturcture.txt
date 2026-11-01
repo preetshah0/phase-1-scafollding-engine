@@ -1,0 +1,24 @@
+phase1-math-engine/
+├── src/
+│   ├── decompositions/
+│   │   ├── lu.py             # LU decomposition with partial row pivoting (PA = LU)
+│   │   ├── cholesky.py       # Cholesky factorization (A = LLᵀ) for SPD matrices
+│   │   └── qr.py             # QR factorization via Householder reflections
+│   ├── solvers/
+│   │   ├── linear_solve.py   # Forward & back substitution for triangular systems
+│   │   ├── conjugate_grad.py # Conjugate Gradient (CG) for large sparse/SPD systems
+│   │   └── least_squares.py  # OLS & Ridge regression with condition number diagnostics
+│   ├── spectral/
+│   │   ├── power_iteration.py# Power iteration & Rayleigh quotient for dominant eigenvalues
+│   │   └── svd.py            # Truncated SVD implementation for low-rank approximations
+│   └── applications/
+│       ├── svd_compression.py# Image compression via rank-k SVD reconstruction
+│       └── gp_regression.py  # Gaussian Process Regression using Cholesky factor solves
+├── tests/
+│   ├── test_decompositions.py# Numerical accuracy verified against scipy.linalg tolerances
+│   ├── test_solvers.py       # Convergence, residual norm ||Ax - b||, condition number checks
+│   └── test_applications.py  # Compression PSNR, GP predictive mean/variance tests
+├── notebooks/
+│   └── demo_engine.ipynb     # Interactive walkthrough with plots & benchmarks
+├── pyproject.toml            # Project metadata & dependencies managed with uv
+└── README.md                 # Architecture overview, mathematical derivations & CLI guide
